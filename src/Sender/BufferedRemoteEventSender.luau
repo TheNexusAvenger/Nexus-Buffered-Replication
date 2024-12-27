@@ -7,7 +7,7 @@ local BufferedRemoteEventSender = {}
 BufferedRemoteEventSender.__index = BufferedRemoteEventSender
 
 export type BufferedRemoteEvent = {
-    FireAllClients: (self: BufferedRemoteEvent, Data: any) -> (),
+    FireAllClients: (self: BufferedRemoteEvent, ...any) -> (),
     [any]: any,
 } | UnreliableRemoteEvent | RemoteEvent
 export type BufferedRemoteEventSender<TKey, TData> = {
