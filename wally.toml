@@ -1,0 +1,15 @@
+[package]
+name = "thenexusavenger/nexus-buffered-replication"
+repository = "https://github.com/TheNexusAvenger/Nexus-Buffered-Replication"
+description = "Packs together small packets together for more efficient network usage with UnreliableRemoteEvents."
+license = "MIT"
+authors = ["TheNexusAvenger"]
+version = "1.0.0"
+
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+exclude = ["**"]
+include = ["src", "src/*", "default.project.json", "wally.lock", "wally.toml"]
+
+[dependencies]

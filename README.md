@@ -19,7 +19,7 @@ in a `UnreliableRemoteEvent` or `RemoteEvent` and function to convert the key
 and data to a buffer.
 
 ```luau
-local BufferedRemoteEventSender = require(...)
+local BufferedRemoteEventSender = require(...).Sender.BufferedRemoteEventSender
 local RemoteEvent = ... --Can be an UnreliableRemoteEvent or RemoteEvent.
 
 --Create the BufferedRemoteEventSender instance.
@@ -48,7 +48,7 @@ end
 
 On the client, `BufferedRemoteEventReceiver` can optionally be used as a wrapper.
 ```luau
-local BufferedRemoteEventReceiver = require(...)
+local BufferedRemoteEventReceiver = require(...).Receiver.BufferedRemoteEventReceiver
 local RemoteEvent = ... --Can be an UnreliableRemoteEvent or RemoteEvent.
 
 --Create the BufferedRemoteEventReceiver instance.
@@ -73,7 +73,7 @@ Most uses of this library are for player updates. Players have special support.
 On the server, this is done with `BufferedRemoteEventSender.WithPlayerKeys`.
 
 ```luau
-local BufferedRemoteEventSender = require(...)
+local BufferedRemoteEventSender = require(...).Sender.BufferedRemoteEventSender
 local RemoteEvent = ... --Can be an UnreliableRemoteEvent or RemoteEvent.
 
 --Create the BufferedRemoteEventSender instance.
@@ -104,7 +104,7 @@ On the client, `PlayerBufferedRemoteEventReceiver` should be used to handle play
 keys efficiently.
 
 ```luau
-local PlayerBufferedRemoteEventReceiver = require(...)
+local PlayerBufferedRemoteEventReceiver = require(...).Receiver.PlayerBufferedRemoteEventReceiver
 local RemoteEvent = ... --Can be an UnreliableRemoteEvent or RemoteEvent.
 
 --Create the PlayerBufferedRemoteEventReceiver instance.
@@ -132,7 +132,7 @@ For systems with loading stages (ex: Nexus VR Character Model),
 and `RemoteEvent`s.
 
 ```luau
-local EnrollableRemoteEvent = require(...)
+local EnrollableRemoteEvent = require(...).Sender.EnrollableRemoteEvent
 local RemoteEvent = ... --Can be an UnreliableRemoteEvent or RemoteEvent.
 
 --Create the EnrollableRemoteEvent.
